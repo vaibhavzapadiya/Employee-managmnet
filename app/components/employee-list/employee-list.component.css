@@ -1,0 +1,290 @@
+/* General Container Styling */
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  
+}
+
+/* Navbar Styling */
+app-navbar {
+  margin-bottom: 20px;
+}
+
+/* Search and Filter Form Styling */
+.search-filter form {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.search-filter input, 
+.search-filter select, 
+.search-filter button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.search-filter input {
+  flex: 1;
+}
+
+.search-filter select {
+  max-width: 200px; /* Ensure select box has a reasonable max width */
+}
+
+.search-filter button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-filter button:hover {
+  background-color: #0056b3;
+}
+
+/* Total Employee Count Styling */
+.total-count {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.total-count h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Employee List Table Styling */
+.employee-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.employee-list th, 
+.employee-list td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.employee-list th {
+  background-color: #6c748b;
+  color: white;
+  cursor: pointer;
+}
+
+.employee-list th.sorted-asc::after {
+  content: "▲";
+}
+
+.employee-list th.sorted-desc::after {
+  content: "▼";
+}
+
+.employee-list tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #495057;
+}
+
+.pagination > * + * {
+  margin-left: 10px;
+}
+
+/* Edit Form Styling */
+.edit-form {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.edit-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-form label {
+  font-weight: bold;
+}
+
+.edit-form input, 
+.edit-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.edit-form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Profile Modal Styling */
+.profile-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content p {
+  margin: 10px 0;
+}
+
+.modal-content button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 11px;
+  border-radius: 17px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Button Styles */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #d6d6d6;
+  color: #a0a0a0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Specific Button Styles */
+button.edit-button {
+  background-color: #28a745;
+  margin: 3px;
+}
+
+button.edit-button:hover {
+  background-color: #218838;
+}
+
+button.delete-button {
+  background-color: #dc3545;
+}
+
+button.delete-button:hover {
+  background-color: #c82333;
+}
+
+button.apply-filters-button {
+  background-color: #17a2b8;
+}
+
+button.apply-filters-button:hover {
+  background-color: #138496;
+}
+
+/* Items Per Page Styling */
+.items-per-page {
+  display: flex;
+  align-items: center;
+}
+
+.items-per-page label {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.items-per-page select {
+  padding: 5px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}

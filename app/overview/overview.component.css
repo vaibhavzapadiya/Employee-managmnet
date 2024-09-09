@@ -1,0 +1,81 @@
+/* Basic reset for margin and padding */
+* {
+ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+  /* Body styling */
+  body {
+    font-family: Arial, sans-serif; /* Set a clean, readable font */
+    line-height: 1.6; /* Improve readability */
+    color: #333; /* Standard text color */
+  /* Light background color for contrast */
+    padding: 0;
+    margin: 0;
+    background-color: #f9f8fc;
+  }
+  
+  /* Container styling */
+  .report-card-container {
+    padding: 20px;
+    background-color: #c5b4f7;
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between cards */
+    flex-wrap: wrap; /* Allow wrapping to next line on smaller screens */
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  /* Report card styling */
+  .report-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%; /* Full width for mobile */
+    max-width: 250px; /* Maximum width for desktop */
+  }
+  
+  .report-card:hover {
+    transform: scale(1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header styling */
+  .report-card-header {
+    background: #627633;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Body styling */
+  .report-card-body {
+    padding: 10px;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .report-card-body p {
+    margin-bottom: 8px;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .report-card-container {
+      justify-content: center; /* Center cards on smaller screens */
+    }
+    
+    .report-card {
+      width: 100%; /* Full width on smaller screens */
+      max-width: none; /* Remove max-width restriction */
+    }
+  }
+  

@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div>
+    <h2>Employee List</h2>
+    <form (ngSubmit)="onFilter()">
+      <div>
+        <label for="minSalary">Min Salary:</label>
+        <input type="number" id="minSalary" [(ngModel)]="minSalary" name="minSalary" placeholder="Minimum Salary">
+      </div>
+      <div>
+        <label for="maxSalary">Max Salary:</label>
+        <input type="number" id="maxSalary" [(ngModel)]="maxSalary" name="maxSalary" placeholder="Maximum Salary">
+      </div>
+      <button type="submit" [disabled]="isLoading">Filter</button>
+      <button type="button" (click)="downloadPDF()" [disabled]="isLoading">Download PDF</button>
+    </form>
+  
+    <div *ngIf="isLoading">Loading...</div>
+  
+    <table *ngIf="!isLoading && employees.length > 0">
+      <thead>
+        <tr>
+          <th> Name</th>
+    
+        
+          <th>Gender</th>
+          <th>DepartmentName</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.firstName }} {{ employee.lastName }}</td>
+   
+         
+          <td>{{ employee.gender }}</td>
+          <td>{{ employee.departmentName }}</td>
+          <td>{{ employee.salary | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div *ngIf="!isLoading && employees.length === 0">
+      No employees found.
+    </div>
+</div>

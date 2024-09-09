@@ -1,0 +1,70 @@
+/* Basic Reset */
+* {
+    margin: 10;
+    padding: 10;
+    box-sizing: border-box;
+    text-align: center;
+  color: #000000;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Set a clean, readable font */
+    line-height: 1.6; /* Improve readability */
+    color: #333; /* Standard text color */
+    background-color: #6786a5; /* Light background color for contrast */
+    padding: 0;
+    margin: 0;
+  }
+  
+
+/* Navbar Styling */
+app-navbar {
+    display: block; /* Ensure the navbar is displayed correctly */
+    margin-bottom: 20px; /* Space below the navbar */
+}
+
+/* Main Container Styling */
+.visualization-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+}
+
+/* Description Section Styling */
+.visualization-description {
+    margin-bottom: 20px;
+}
+
+.visualization-description h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.visualization-description p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Chart Container Styling */
+.chart-container {
+    display: flex;
+    justify-content: center; /* Center the chart horizontally */
+}
+
+.chart-wrapper {
+    width: 100%;
+    max-width: 800px; /* Limit the maximum width of the chart */
+    height: 400px; /* Set a fixed height for the chart */
+    background-color: #fff; /* Background color for the chart container */
+    border-radius: 8px; /* Rounded corners for the chart container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for visual depth */
+    padding: 20px; /* Padding inside the chart container */
+}
+
+/* Optional: Style for Canvas */
+canvas {
+    width: 100% !important; /* Ensure the canvas takes the full width of its container */
+    height: auto !important; /* Maintain aspect ratio */
+}

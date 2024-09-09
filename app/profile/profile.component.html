@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div *ngIf="userRole">
+    <h2>User Profile</h2>
+    <div>
+      <strong>Username:</strong> {{ userProfile.username }}
+    </div>
+    <div>
+      <strong>Email:</strong> {{ userProfile.email }}
+    </div>
+    <div>
+      <strong>Role:</strong> {{ userRole }}
+    </div>
+    <!-- Add more profile fields as needed -->
+  </div>
+

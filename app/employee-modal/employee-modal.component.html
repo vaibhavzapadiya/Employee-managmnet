@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h2>Employees in Department</h2>
+  <table *ngIf="employees.length > 0">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>departmentName</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Mobile No.</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees; let i = index">
+            <td>{{ getIndex(i) }}</td>
+        <td>{{ employee.firstName }} {{ employee.lastName }}</td>
+        <td>{{ getDepartmentName(employee.departmentId!) }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.gender }}</td>
+        <td>{{ employee.mobileNum }}</td>
+        <td>{{ employee.salary }}</td>
+
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="employees.length === 0">No employees found for this department.</p>
+  <button (click)="goBack()">Back</button>
+</div>

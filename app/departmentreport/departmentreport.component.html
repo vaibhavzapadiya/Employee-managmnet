@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="report-container">
+    <h1>Departmental Report</h1>
+    <button (click)="downloadDepartmentalReportPdf()">Download Report PDF</button>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Department ID</th>
+          <th>Department Name</th>
+          <th>Employee Count</th>
+          <th>Average Salary</th>
+          <th>Total Salary Expense</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let report of reports; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ report.departmentId }}</td>
+          <td>{{ report.departmentName }}</td>
+          <td>{{ report.employeeCount }}</td>
+          <td>{{ report.averageSalary | currency }}</td>
+          <td>{{ report.totalSalaryExpense | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

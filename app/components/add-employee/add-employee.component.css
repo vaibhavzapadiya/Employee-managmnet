@@ -1,0 +1,74 @@
+/* Style for the entire form container */
+.employee-form {
+  max-width: 600px;
+  margin: 20px auto; /* Add vertical margin for spacing */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+/* Style for each form group */
+.employee-form div {
+  margin-bottom: 15px;
+}
+
+/* Style for form labels */
+.employee-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333; /* Ensure label text is readable */
+}
+
+/* Style for form inputs and selects */
+.employee-form input[type="text"],
+.employee-form input[type="email"],
+.employee-form input[type="number"],
+.employee-form input[type="password"],
+.employee-form select {
+  width: 100%;
+  padding: 10px; /* Increase padding for better touch targets */
+  border: 1px solid #ccc; /* Use a lighter border color for a softer look */
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px; /* Ensure font size is consistent */
+}
+
+/* Style for the submit button */
+.employee-form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+/* Hover effect for the submit button */
+.employee-form button[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Style for the checkbox */
+.employee-form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Ensure form validation styles */
+.employee-form .ng-invalid.ng-touched {
+  border-color: red;
+  box-shadow: 0 0 3px rgba(255, 0, 0, 0.5); /* Add shadow to highlight invalid fields */
+}
+
+/* Additional styling for focus states */
+.employee-form input:focus, 
+.employee-form select:focus {
+  border-color: #007bff;
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5); /* Highlight on focus */
+}

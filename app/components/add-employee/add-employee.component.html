@@ -1,0 +1,60 @@
+<!-- src/app/components/add-employee/add-employee.component.html -->
+ <app-navbar></app-navbar>
+<div class="employee-form">
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="firstName">First Name:</label>
+        <input id="firstName" formControlName="firstName" type="text" />
+      </div>
+      <div>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" formControlName="lastName" type="text" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" type="email" />
+      </div>
+      <div>
+        <label for="gender">Gender:</label>
+        <input id="gender" formControlName="gender" type="text" />
+      </div>
+      <div>
+        <label for="userName">Username:</label>
+        <input id="userName" formControlName="userName" type="text" />
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input id="password" formControlName="password" type="password" />
+      </div>
+      <div>
+        <label for="mobileNum">Mobile Number:</label>
+        <input id="mobileNum" formControlName="mobileNum" type="text" />
+      </div>
+      <div>
+        <label for="salary">Salary:</label>
+        <input id="salary" formControlName="salary" type="number" />
+      </div>
+      <div>
+        <label for="departmentId">Department Name:</label>
+        <select id="departmentId" formControlName="departmentId">
+          <option *ngFor="let dept of departments" [value]="dept.departmentId" >{{ dept.departmentName }}</option>
+        </select>
+      </div>
+      <div>
+        <label for="createdby">Created By:</label>
+        <input id="createdby" formControlName="createdby" type="text" />
+      </div>
+      <div>
+        <label for="Updatedby">Updated By:</label>
+        <input id="Updatedby" formControlName="Updatedby" type="text" />
+      </div>
+      <div>
+        <label for="isActive">Is Active:</label>
+        <input id="isActive" formControlName="isActive" type="checkbox" />
+      </div>
+      
+      <button type="submit" [disabled]="employeeForm.invalid">Add Employee</button>
+    </form>
+ 
+  </div>
+  

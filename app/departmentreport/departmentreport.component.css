@@ -1,0 +1,73 @@
+/* report-download.component.css */
+
+.report-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.report-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.report-container button {
+  display: math;
+  width: 100%;
+  max-width: 250px;
+  margin: 4px auto 20px;
+  padding: 11px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.report-container button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #e9ecef;
+}
+
+table td {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .report-container table {
+    font-size: 12px;
+  }
+
+  .report-container button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

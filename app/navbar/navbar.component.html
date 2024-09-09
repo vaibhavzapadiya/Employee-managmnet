@@ -1,0 +1,20 @@
+<nav class="navbar">
+    <div class="container">
+        <a routerLink="/home" class="logo">Employee-Managment</a>
+       
+        <ul class="nav-links">
+            <li><a routerLink="/home">Home</a></li>
+            <li *ngIf="userRole === 'Admin'"><a routerLink="/add-employee">Add-Employee</a></li>
+            <li><a routerLink="/employees">Employee-List</a></li>
+            <li *ngIf="userRole === 'Admin'" class="dropdown">
+                <a class="dropbtn">Reports</a>
+                <div class="dropdown-content">
+                    <a routerLink="/department-report">Department Report</a>
+                    <a routerLink="/salary-report">salary Report</a>
+                        </div>
+                        <li><a routerLink="/project">Project</a></li>
+                        <li><a routerLink="/profile">Profile</a></li>
+            <li><button class="logout-button" (click)="logout()">Logout</button></li>
+        </ul>
+    </div>
+</nav>

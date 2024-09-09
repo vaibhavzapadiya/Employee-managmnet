@@ -1,0 +1,18 @@
+
+<h1> Department Overview</h1>
+<div class="report-card-container">
+
+    
+    <div class="report-card" *ngFor="let report of reports; let i = index">
+      <div class="report-card-header">
+        <h4>Department {{ i + 1 }}</h4>
+      </div>
+      <div class="report-card-body">
+        <p><strong>Department ID:</strong> {{ report.departmentId }}</p>
+        <p><strong>Department Name:</strong> {{ report.departmentName }}</p>
+        <p><strong>Employee Count:</strong> {{ report.employeeCount }}</p>
+        <p><strong>Average Salary:</strong> {{ report.averageSalary | currency }}</p>
+      </div>
+    </div>
+  </div>
+  

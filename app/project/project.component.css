@@ -1,0 +1,16 @@
+a {
+    display: block; /* Make <a> a block element */
+    color: #007BFF; /* Blue color for the text */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Larger font size for emphasis */
+    padding: 10px; /* Space around the text */
+    margin: 10px 0; /* Margin to separate from other elements */
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Styling for <a> tag on hover */
+a:hover {
+    background-color: #e2e6ea; /* Darker background on hover */
+}

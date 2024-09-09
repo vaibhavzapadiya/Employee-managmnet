@@ -1,0 +1,61 @@
+<!-- Navbar Component -->
+<app-navbar></app-navbar>
+
+<!-- Main Container -->
+<div class="container">
+  <div class="report-container">
+    <h1>Dashboard</h1>
+
+    <!-- Card Container for Departmental Reports -->
+    <div class="card-container">
+      <div class="card" *ngFor="let report of reports; let i = index">
+        <div class="card-header">
+          <h3>{{ report.departmentName }}</h3>
+        </div>
+        <div class="card-body">
+          <p><strong class="employee-count-label">Employee Count:</strong> <span class="employee-count">{{ report.employeeCount }}</span></p>
+          <p>
+            <button class="details-button" (click)="openModal(report.departmentId)">Quick View</button>
+          
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for displaying all employee profiles -->
+<div *ngIf="showModal" class="modal-overlay">
+  <div class="modal-content">
+    <h2>Employees in {{ selectedDepartment?.departmentName }}</h2><button (click)="closeModal()">Close</button>
+    
+    <!-- Table for employee profiles -->
+    
+    <table class="profile-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let profile of employees;let i = index">
+          <td>{{ i+1 }}</td>
+          <td>{{ profile.firstName }} {{ profile.lastName }}</td>
+
+          <td>{{ profile.email }}</td>
+          <td>{{ profile.salary | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+   
+  </div>
+</div>
+
+<!-- Additional Components -->
+
+<app-overview></app-overview>
+<app-visuilization></app-visuilization>
